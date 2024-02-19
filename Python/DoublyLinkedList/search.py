@@ -22,7 +22,7 @@ class DoublyLinkedList:
 
         else:
             last = self.head 
-            while last != None:
+            while last.next != None:
                 last = last.next
 
             last.next = newNode
@@ -36,14 +36,14 @@ class DoublyLinkedList:
             if temp.next == None:
                 last = temp
 
-        temp = temp.next
+            temp = temp.next
 
         print("Backward Traversal:")
         temp = last
         while temp:
             print(temp.data)
 
-        temp = temp.prev
+            temp = temp.prev
 
     def search(self, key):
         temp = self.head
@@ -53,7 +53,7 @@ class DoublyLinkedList:
                 return True
             temp = temp.next
             
-            return False
+        return False
 
 if __name__ == "__main__":
 
@@ -82,3 +82,5 @@ if __name__ == "__main__":
         print("Search Found")
     else:
         print("Search Not Found")
+
+    llist.printlist()
